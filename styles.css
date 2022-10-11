@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("./fonts/Manrope-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face{
+    font-family: "Manrope";
+    src: url("./fonts/Manrope-Bold.ttf");
+    font-weight: 700;
+}
+
+:root{
+    --very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: #6d7f97;
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --background-color: #ecf2f8;
+
+    --font: "Manrope", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    font-size: 1.3rem;
+
+    background-color: var(--background-color);
+}
+
+main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2.2fr 1fr 1.5fr 1fr;
+
+    max-width: 37.5rem;
+    height: 58rem;
+
+    font-family: var(--font);
+
+    border-radius: 1.5rem;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(0, 0, 0, 0.089);
+}
+.main__img{
+    width: 100%;
+    height: 25rem;
+    
+    overflow: hidden;
+}
+.main__h1{
+    padding: 1rem 4rem;
+    margin-block-start: 1.5rem;
+
+    font-size: 1.8rem;
+
+    color: var(--very-Dark-Grayish-Blue);
+}
+.main__p{
+    padding: 1rem 4rem;
+
+    line-height: 2.2rem;
+
+    color: var(--Desaturated-Dark-Blue);
+}
+.main__credits{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+
+    padding: 1rem 4rem 1rem;
+}
+.credits__picture{
+    align-self: center;
+    justify-self: center;
+
+    height: 5rem;
+    width: 5rem;
+
+    background-image: url("./images/avatar-michelle.jpg");
+    background-position: center;
+    background-size: 5rem;
+    border-radius: 50%;
+}
+.credits__name_wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.credits__name{
+    font-weight: 700;
+
+    color: var(--very-Dark-Grayish-Blue);
+}
+.credits__date{
+    color: var(--Grayish-Blue);
+}
+.credits__share_button{
+    height: 3.5rem;
+    width: 3.5rem;
+    align-self: center;
+    justify-self: center;
+
+    border-radius: 50%;
+    background-color: var(--background-color);
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.credits__social_media{
+    position: absolute;
+    display: none;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 4rem;
+    
+    background-color: var(--very-Dark-Grayish-Blue);
+}
+
+.credits__social_media > span{
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.credits__social_media > span:nth-child(1){
+    width: auto;
+    height: auto;
+    letter-spacing: 0.5rem;
+    color: var(--Grayish-Blue);
+}
+
+.credits__social_media > span:nth-child(2){
+    background-image: url("./images/icon-facebook.svg");
+    background-position: center;
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+}
+
+.credits__social_media > span:nth-child(3){
+    background-image: url("./images/icon-twitter.svg");
+    background-position: center;
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+}
+
+.credits__social_media > span:nth-child(4){
+    background-image: url("./images/icon-pinterest.svg");
+    background-position: center;
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+}
+
+/*----------------------modifiers---------------------------*/
+.social_media--show{
+    display: flex;
+}
+
+.share_button--active{
+    background-color: var(--Desaturated-Dark-Blue);
+    filter: invert(95%) sepia(2%) saturate(1411%) hue-rotate(185deg) brightness(102%) contrast(94%);
+}
