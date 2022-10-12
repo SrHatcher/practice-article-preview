@@ -79,6 +79,7 @@ main{
     gap: 1.5rem;
 
     padding: 1rem 4rem 1rem;
+    transition: all 0.2s;
 }
 .credits__picture{
     align-self: center;
@@ -117,12 +118,13 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
+    transition: all 0.2s;
 }
 
 .credits__social_media{
     position: absolute;
-    display: none;
+    display: flex;
     align-items: center;
     gap: 2rem;
 
@@ -131,9 +133,12 @@ main{
     padding: 0 4rem;
     
     background-color: var(--very-Dark-Grayish-Blue);
+    opacity: 0;
+    transition: opacity ease-in-out 0.2s;
+    z-index: -1;
 }
 
-.credits__social_media > span{
+.credits__social_media > a{
     display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
@@ -146,30 +151,34 @@ main{
     color: var(--Grayish-Blue);
 }
 
-.credits__social_media > span:nth-child(2){
+.credits__social_media > a:nth-child(2){
     background-image: url("./images/icon-facebook.svg");
     background-position: center;
     background-size: 2.5rem;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
-.credits__social_media > span:nth-child(3){
+.credits__social_media > a:nth-child(3){
     background-image: url("./images/icon-twitter.svg");
     background-position: center;
     background-size: 2.5rem;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
-.credits__social_media > span:nth-child(4){
+.credits__social_media > a:nth-child(4){
     background-image: url("./images/icon-pinterest.svg");
     background-position: center;
     background-size: 2.5rem;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 /*----------------------modifiers---------------------------*/
 .social_media--show{
-    display: flex;
+    z-index: 1;
+    opacity: 1;
 }
 
 .share_button--active{
